@@ -39,11 +39,67 @@
       z-index: 1; 
       position: relative;
     }
+
+.divVolador {
+position: absolute; 
+width: 100px;
+ height: 100px;
+transition: top 2.5s ease-in-out, left 2.5s ease-in-out;
+}
+
+.divVolador img {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+object-fit: cover;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
   </style>
 </head>
 <body>
 
   <p>Espero que estes pronto mejor Tania, te quiero mucho, te mando un corazoncito ❤️</p>
   <div id="heart"></div>
+
+  <div class="divVolador">
+  <img src="mono1.png" alt="Imagen 1">
+</div>
+
+<div class="divVolador">
+  <img src="mono2.png" alt="Imagen 2">
+</div>
+
+<div class="divVolador">
+  <img src="mono3.png" alt="Imagen 3">
+</div>
+
+<script>
+ function moverDivAleatoriamente(div) {
+ const altoVentana = window.innerHeight;
+ const anchoVentana = window.innerWidth;
+ const altoDiv = div.clientHeight;
+ const anchoDiv = div.clientWidth;
+ const maxTop = altoVentana - altoDiv;
+ const maxLeft = anchoVentana - anchoDiv;
+
+const nuevaPosTop = Math.floor(Math.random() * maxTop);
+ const nuevaPosLeft = Math.floor(Math.random() * maxLeft);
+
+ div.style.top = nuevaPosTop + 'px';
+ div.style.left = nuevaPosLeft + 'px';
+ }
+
+ const todosLosDivs = document.querySelectorAll('.divVolador');
+
+ todosLosDivs.forEach(div => {
+    moverDivAleatoriamente(div);
+
+    const tiempoAleatorio = Math.floor(Math.random() * 3000) + 500; 
+
+setInterval(() => {
+moverDivAleatoriamente(div); },
+ tiempoAleatorio); 
+ });
+</script>
 </body>
 </html>
