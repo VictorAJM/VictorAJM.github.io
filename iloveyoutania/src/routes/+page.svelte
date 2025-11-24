@@ -7,6 +7,7 @@
   import LoaderScreen from "../components/LoaderScreen.svelte";
   import IntroScreen from "../components/IntroScreen.svelte";
   import CakeScreen from "../components/CakeScreen.svelte";
+	import MessageScreen from "../components/MessageScreen.svelte";
 
   let currentScreen = 0;
   let flowComplete = false;
@@ -16,6 +17,7 @@
     { component: LoaderScreen, props: { onDone: () => nextScreen() } },
     { component: IntroScreen, props: { onNext: () => nextScreen() } },
     { component: CakeScreen, props: { onNext: () => nextScreen() } },
+    { component: MessageScreen, props: { onNext: () => nextScreen() } },
   ];
 
   function nextScreen() {
