@@ -8,12 +8,14 @@
   import IntroScreen from "../components/IntroScreen.svelte";
   import CakeScreen from "../components/CakeScreen.svelte";
 	import MessageScreen from "../components/MessageScreen.svelte";
+	import PasswordScreen from "../components/PasswordScreen.svelte";
 
   let currentScreen = 0;
   let flowComplete = false;
 
   // Define el flujo de pantallas aquí
   const screens = [
+    { component: PasswordScreen, props: { onNext: () => nextScreen() } },
     { component: LoaderScreen, props: { onDone: () => nextScreen() } },
     { component: IntroScreen, props: { onNext: () => nextScreen() } },
     { component: CakeScreen, props: { onNext: () => nextScreen() } },

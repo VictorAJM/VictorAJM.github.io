@@ -4,7 +4,7 @@
 
   export let onDone = () => {};
 
-  let count = 2;
+  let count = 22;
   onMount(() => {
     const timer = setInterval(() => {
       count -= 1;
