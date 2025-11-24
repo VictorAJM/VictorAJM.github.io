@@ -9,7 +9,7 @@
 <div class="py-10 md:py-14 text-center">
   <div class="flex flex-col items-center gap-6">
     <img
-      src="/gifs/intro.gif"
+      src="https://i.pinimg.com/originals/50/ed/9d/50ed9d33c7e610ea977cf47a6a58ee9b.gif"
       alt="Cute birthday animation"
       class="w-[140px] md:w-[180px] object-cover"
     />
@@ -27,12 +27,12 @@
     </div>
 
 <div class="mt-8">
-  <button 
-    on:click={onNext} 
-    class="bg-white text-black px-6 py-3 rounded-full font-bold z-50 relative hover:bg-gray-200 transition"
+  <GradientButton 
+    onClick={onNext} 
+    className="bg-white text-black px-6 py-3 rounded-full font-bold z-50 relative hover:bg-gray-200 transition"
   >
-    BOTÓN DE PRUEBA (CLICK AQUÍ)
-  </button>
+    CONTINUAR
+  </GradientButton>
 </div>
   </div>
 </div>
