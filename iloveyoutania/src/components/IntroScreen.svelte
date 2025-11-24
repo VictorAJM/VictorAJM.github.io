@@ -1,6 +1,7 @@
 <script>
   import GradientButton from "./GradientButton.svelte";
   import { Gift } from "lucide-svelte";
+  import { ArrowRight, Flame, WandSparkles } from "lucide-svelte";
 
   // Recibimos la función onNext
   export let onNext = () => {};
@@ -32,6 +33,7 @@
     className="bg-white text-black px-6 py-3 rounded-full font-bold z-50 relative hover:bg-gray-200 transition"
   >
     CONTINUAR
+    <ArrowRight size={20} class="mt-0.5" />
   </GradientButton>
 </div>
   </div>
